@@ -1,0 +1,22 @@
+@import '../../assets/styles/light_theme.scss';
+
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+    .input {
+        display: block;
+        width: 100%;
+        padding: 10px 20px;
+        border-radius: 15px;
+        border: 1px solid $border;
+        outline: none;
+        font-size: 19px;
+        transition-duration: 0.250s;
+        
+
+        &:focus {
+            border: 2px solid $border-hover;
+            background-color: $main-hover;
+        }
+    }
+}

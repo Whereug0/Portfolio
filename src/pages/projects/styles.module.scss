@@ -1,0 +1,13 @@
+.cards {
+    cursor: pointer;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1.25em;
+    margin-bottom: 30px;
+}
+
+.chips-wrap {
+    margin: 20px 0;
+    gap: 30px;
+}

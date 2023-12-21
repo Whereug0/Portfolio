@@ -1,0 +1,17 @@
+.experiences-cards-wrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 50px;
+    grid-row-gap: 45px;
+    margin-top: 70px;
+    .card__item1 {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+    .card__item2 {
+        grid-area: 2 / 2 / 3 / 3;
+    }
+    .card__item3 {
+        grid-area: 3 / 1 / 4 / 2;
+    }
+}

@@ -1,0 +1,56 @@
+@import '../../../assets/styles/light_theme.scss';
+
+.slider-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 220px;
+    .slider-nav-button {
+        display: flex;
+        border: 1px solid $border;
+        align-items: center;
+        justify-content: center;
+        min-width: 25px;
+        height: 25px;
+        background-color: transparent;
+        border-radius: 50%;
+        &:hover {
+            border: 1px solid $border-hover;
+        }
+        &.left {
+
+        }
+        &.right {
+            transform: rotate(180deg);
+        }
+    }
+    .slider__item{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .slider {
+        &__item {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            width: 150px;
+            height: 190px;
+            padding: 15px;
+        }
+    }
+    .img-slider {
+        width: 120px;
+        height: 120px;
+        margin: 20px 0;
+    }
+    .img-slider-css {
+        width: 85px;
+        height: 120px;
+        margin: 20px 0;
+    }
+}
+
+p{
+    font-size: 14px;
+}

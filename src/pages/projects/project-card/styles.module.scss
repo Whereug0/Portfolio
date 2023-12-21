@@ -1,0 +1,38 @@
+@import '../../../assets//styles/light_theme.scss';
+
+
+.project-card-wrap {
+    .img-box {
+        img {
+            width: 40px;
+            height: 40px;
+        }
+    }
+    
+    .template {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+        opacity: 0.6;
+    }
+    .title-link{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid $border;
+    }
+    .description{
+        padding: 30px 0;
+    }
+    .chips {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid $border;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+    }
+}

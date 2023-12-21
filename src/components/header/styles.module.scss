@@ -1,0 +1,81 @@
+@import '../../assets/styles/light_theme.scss';
+
+.container {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background: white;
+}
+
+header {
+    max-width: 1200px;
+    min-width: 1200px;
+    margin: 0 auto;
+    position: sticky;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid $border;
+    max-width: max-content;
+    max-width: 100%;
+    a {
+        color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover {
+            background: #b1b1b1;
+        }
+    }
+    nav {
+        max-width: 1400px;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        padding: 0 10px;
+        
+        .hidden{
+            font-size: 22px;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &:hover {
+                background: #b1b1b1;
+            }
+            
+        }
+        .navMenu {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            a {
+            padding: 10px 20px;
+            }
+        }
+        .search_dark_light {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.25rem;
+            a { 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 11.5px 8px;
+                img {
+                    margin: 0;
+                }
+                &:hover {
+                    background: #b1b1b1;
+                }
+            }
+        }
+    }
+}
+
+img {
+    width: 1em;
+    height: 1em;
+    margin-right: 10px;
+}

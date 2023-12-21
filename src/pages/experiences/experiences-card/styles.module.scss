@@ -1,0 +1,19 @@
+.card-wrap {
+    display: flex;
+    justify-content: flex-start;
+    .image {
+        width: 75px;
+        height: 75px;
+        border-radius: 15px;
+        margin-right: 25px;
+    }
+    .icons-wrap {
+        display: flex;
+        gap: 9px;
+        margin: 20px 0;
+    }
+    .date {
+        opacity: 0.5;
+        margin-bottom: 15px;
+    }
+}

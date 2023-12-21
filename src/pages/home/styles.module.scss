@@ -1,0 +1,31 @@
+@import '../../assets/styles/light_theme.scss';
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    height: 75vh;
+    img {
+        width: 22px;
+        height: 22px;
+    }
+    .icons {
+        margin-top: 15px;
+    }
+    .content {
+        width: 768px;
+        text-align: left;
+        color: $tertiary-text;
+        
+        h1 {
+            font-size: 4em;
+        }
+        p {
+            font-size: 1.2em;
+            font-weight: 200;
+
+        }
+    }
+}
