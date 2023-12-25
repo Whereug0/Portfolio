@@ -6,11 +6,12 @@ import Skills from "./pages/skills";
 import DetailSkill from "./pages/skills/detail";
 import Projects from "./pages/projects";
 import Experiences from "./pages/experiences";
-import DetailExperiences from "./pages/experiences/[slug]";
+import DetailExperiences from "./pages/experiences/detail";
 import Education from "./pages/education";
 import Resume from "./pages/resume";
 import Search from "./pages/search";
 import common from "./assets/styles/common.module.scss"
+import DetailProject from "./pages/projects/detail";
 function App() {
   return (
     <div className={styles.mainLayout}>
@@ -25,7 +26,7 @@ function App() {
           </Route>
           <Route path="/projects">
             <Route index element={<Projects />} />
-            <Route path=":slug" element={<DetailSkill />} />
+            <Route path=":id" element={<DetailProject />} />
           </Route>
           <Route path="/experiences">
             <Route index element={<Experiences />} />

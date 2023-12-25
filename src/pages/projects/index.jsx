@@ -3,8 +3,8 @@ import styles from './styles.module.scss'
 import SearchBar from "../../components/search-bar";
 import Chip from "../../components/chip";
 import ProjectCard from "./project-card";
-import noImg from "../../assets/images/no-img.svg";
-import svelteImg from '../../assets/images/svelte.png'
+import PROPJECT_DATA from "./detail/data";
+
 function Projects() {
     return (
         <div className={styles["project-wrap-page"]}>
@@ -15,8 +15,11 @@ function Projects() {
                 <Chip label = "React"/>
             </div>
             <div className={styles["cards"]}>
-                <ProjectCard image={noImg} description ="lorem ipsum" date = "1 day"/>       
-                <ProjectCard image={svelteImg} description ="lorem ipsum" date = "1 day"/>     
+                {PROPJECT_DATA.map(item => {
+                    return (
+                        <ProjectCard project={item}/>
+                    )
+                })}
             </div>
         </div>
     )

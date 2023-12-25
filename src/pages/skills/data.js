@@ -6,14 +6,26 @@ import SassLogo from '../../assets/images/sass.png'
 import ReactLogo from '../../assets/images/react.svg'
 import SvelteLogo from '../../assets/images/svelte.png'
 export const SKILLS_BY_NAME = (name) => {
-    return SKILLS_DATA.find(skill => skill.name === name) || null
+    return SKILLS_DATA.find(skill => skill.slug=== name) || null
 }
 
+export const SHORT_SKILL_BY_SLUG = (slug) => {
+  const findskill = SKILLS_DATA.map(skill => skill.slug === slug)
+  if (!findskill) {
+    return{}
+  }
+  return {
+    id: findskill.id,
+    slug: findskill.slug,
+    label: findskill.label,
+    image: findskill.image
+  }
+}
 
 export const SKILLS_DATA = [
     {
       id: 0,
-      name: 'js',
+      slug: 'js',
       label: 'JavaScript',
       image: JsLogo,
       description: 'lorem ipsum',
@@ -21,7 +33,7 @@ export const SKILLS_DATA = [
     },
     {
       id: 1,
-      name: 'ts',
+      slug: 'ts',
       label: 'TypeScript',
       image: TsLogo,
       description: 'lorem ipsum',
@@ -29,7 +41,7 @@ export const SKILLS_DATA = [
     },
     {
       id: 2,
-      name: 'css',
+      slug: 'css',
       label: 'CSS',
       image: CssLogo,
       description: 'lorem ipsum',
@@ -37,7 +49,7 @@ export const SKILLS_DATA = [
     },
     {
       id: 3,
-      name: 'html',
+      slug: 'html',
       label: 'HTML',
       image: HtmlLogo,
       description: 'lorem ipsum',
@@ -45,7 +57,7 @@ export const SKILLS_DATA = [
     },
     {
       id: 4,
-      name: 'sass',
+      slug: 'sass',
       label: 'Sass',
       image: SassLogo,
       description: 'lorem ipsum',
@@ -53,7 +65,7 @@ export const SKILLS_DATA = [
     },
     {
       id: 5,
-      name: 'react',
+      slug: 'react',
       label: 'Reacr Js',
       image: ReactLogo,
       description: 'lorem ipsum',
@@ -61,7 +73,7 @@ export const SKILLS_DATA = [
     },
     {
       id: 6,
-      name: 'svelte',
+      slug: 'svelte',
       label: 'Svelte',
       image: SvelteLogo,
       description: 'lorem ipsum',

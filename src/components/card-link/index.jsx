@@ -1,5 +1,4 @@
 import React from "react";
-import {ReactComponent as LinkIcon} from '../../assets/icons/carbon-link.svg'
 
 
 import styles from './styles.module.scss'
