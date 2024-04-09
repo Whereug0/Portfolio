@@ -1,7 +1,6 @@
 import {SHORT_SKILL_BY_SLUG} from '../../skills/data'
 import jsLogo from '../../../assets/images/js.png'
 import tsLogo from '../../../assets/images/ts.png'
-import svelteLogo from '../../../assets/images/svelte.png'
 
 
 
@@ -13,31 +12,31 @@ export const SHORT_PROJECT_BY_SLUG = (slug) => {
 const findproject = PROJECT_DATA.find(project => project.slug === slug)
 if (!findproject) {
   return{}
-}
-return {
+} return {
   id: findproject.id,
   slug: findproject.slug,
   label: findproject.label,
   image: findproject.image
 }
+
 }
 
 const PROJECT_DATA = [
     {
         id: 0,
         icon: jsLogo,
-        name: 'Project1',
+        name: 'Online Store',
         links: [
             {
                 id:0,
-                link:'https://github.com/Whereug0',
+                link:'https://github.com/Whereug0/my-shop',
                 label: "GitHub",
             }
         ],
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore non dolores voluptatibus vitae praesentium aperiam, iure laboriosam repellendus sunt explicabo pariatur totam enim, nihil animi quisquam. Sit vero quod laborum!",
+        description: "Онлайн магазин разных видов товаров, данные взяты из общедоступного API.",
         skills: [
             SHORT_SKILL_BY_SLUG("js"),
-            SHORT_SKILL_BY_SLUG("ts")
+            SHORT_SKILL_BY_SLUG("sass")
         ]
     },
     {
@@ -55,29 +54,8 @@ const PROJECT_DATA = [
         skills: [
           SHORT_SKILL_BY_SLUG('js'),
           SHORT_SKILL_BY_SLUG('ts'),
-          SHORT_SKILL_BY_SLUG('svelte')
         ]
       },
-      {
-        id: 2,
-        icon: svelteLogo,
-        name: 'Project3',
-        links: [
-          {
-            id: 0,
-            link: 'https://github.com',
-            label: 'Github'
-          }
-        ],
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore non dolores voluptatibus vitae praesentium aperiam, iure laboriosam repellendus sunt explicabo pariatur totam enim, nihil animi quisquam. Sit vero quod laborum!',
-        skills: [
-          SHORT_SKILL_BY_SLUG('js'),
-          SHORT_SKILL_BY_SLUG('ts'),
-          SHORT_SKILL_BY_SLUG('css'),
-          SHORT_SKILL_BY_SLUG('svelte')
-        ]
-      }
-
 ]
 
 

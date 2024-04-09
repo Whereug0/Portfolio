@@ -9,7 +9,7 @@ const initialState = {
     error: null
 }
 
-const projectReduser=(state = initialState,action)=>{
+const projectReduser = (state = initialState,action) => {
     switch (action.type){
         case GET_PROJECTS_REQUEST:
             return{
@@ -50,6 +50,4 @@ const projectReduser=(state = initialState,action)=>{
 }} 
 
 
-export {
-    projectReduser
-}
+export default projectReduser

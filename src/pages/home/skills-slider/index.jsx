@@ -12,7 +12,6 @@ import CssImg from '../../../assets/images/1200px-CSS.3.svg.png'
 import HtmlImg from '../../../assets/images/html.svg'
 import SassImg from '../../../assets/images/sass.png'
 import ReactImg from '../../../assets/images/react.svg'
-import SvelteImg from '../../../assets/images/svelte.png'
 
 
 const SkillsSlider = (props) => {
@@ -43,32 +42,28 @@ const SkillsSlider = (props) => {
                 >
                 <SwiperSlide className={styles['slider__item']}>
                     <img className={styles["img-slider"]} src={JsImg} alt="js-img"/>
-                    <p>JavaScript</p>
+                    <p className={styles.skill}>JavaScript</p>
                 </SwiperSlide>
                 <SwiperSlide className={styles['slider__item']}>
                     <img className={styles["img-slider"]} src={TsImg} alt="ts-img" />
-                    <p>TypeScript</p>
+                    <p className={styles.skill}>TypeScript</p>
                 </SwiperSlide>
                 <SwiperSlide className={styles['slider__item']}>
                     <img className={styles["img-slider-css"]} src={CssImg} alt="css-img" />
-                    <p>CSS</p>
+                    <p className={styles.skill}>CSS</p>
                 </SwiperSlide>
                 <SwiperSlide className={styles['slider__item']}>
                     <img className={styles["img-slider"]} src={HtmlImg} alt="html-img" />
-                    <p>HTML</p>
+                    <p className={styles.skill}>HTML</p>
                 </SwiperSlide>
                 <SwiperSlide className={styles['slider__item']}>
                     <img className={styles["img-slider"]} src={SassImg} alt="sass-img" />
-                    <p>Sass</p>
+                    <p className={styles.skill}>Sass</p>
                 </SwiperSlide>
                 <SwiperSlide className={styles['slider__item']}>
                     <img className={styles["img-slider"]} src={ReactImg} alt="react-img" />
-                    <p>Reacr Js</p>
+                    <p className={styles.skill}>React</p>
                 </SwiperSlide>
-                <SwiperSlide className={styles['slider__item']}>
-                    <img className={styles["img-slider"]} src={SvelteImg} alt="svelte-img" />
-                    <p>Svelte</p>
-                </SwiperSlide> 
             </Swiper> 
             <button 
                     className = {clsx(styles['slider-nav-button'], styles['right'])}

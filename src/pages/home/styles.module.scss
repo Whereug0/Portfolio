@@ -3,10 +3,10 @@
 
 .container {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    gap: 80px;
-    height: 75vh;
+    padding-top: 80px;
+    margin: 130px 0;
     img {
         width: 22px;
         height: 22px;

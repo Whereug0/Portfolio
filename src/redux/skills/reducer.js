@@ -8,7 +8,7 @@ const initialState = {
 }
 
 
-const skillReduser=(state=initialState,action)=>{
+const skillReduser = (state = initialState, action) => {
     switch (action.type){
         case GET_SKILLS_REQUEST:
             return{
@@ -49,6 +49,4 @@ const skillReduser=(state=initialState,action)=>{
             return state
 }}
 
-export {
-    skillReduser
-}
+export default skillReduser

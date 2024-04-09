@@ -17,9 +17,6 @@
         &:hover {
             border: 1px solid $border-hover;
         }
-        &.left {
-
-        }
         &.right {
             transform: rotate(180deg);
         }
@@ -52,5 +49,9 @@
 }
 
 p{
-    font-size: 14px;
+    font-size: 16px;
+}
+
+.skill {
+    font-weight: 700;
 }

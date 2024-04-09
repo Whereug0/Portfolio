@@ -1,17 +1,52 @@
-.experiences-cards-wrap {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 50px;
-    grid-row-gap: 45px;
-    margin-top: 70px;
-    .card__item1 {
-        grid-area: 1 / 1 / 2 / 2;
+@import "../../assets/styles/light_theme.scss";
+
+.exp-wrap {
+  padding-bottom: 48px;
+  .exp-cards-wrap {
+    position: relative;
+    .card-box {
+      display: flex;
+      align-items: center;
     }
-    .card__item2 {
-        grid-area: 2 / 2 / 3 / 3;
+  }
+  .vertical-line {
+    margin-top: 40px;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    width: 0.5px;
+    height: 100%;
+    background: $border;
+    z-index: -2;
+    display: flex;
+    &.vertical-line-dark {
+      background: $dark-2;
     }
-    .card__item3 {
-        grid-area: 3 / 1 / 4 / 2;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: row;
+  }
+  @media screen and (max-width: 951px) {
+    .exp-cards-wrap {
+      display: grid;
+      grid-template-columns: 1fr;
     }
+    .vertical-line {
+      display: none;
+    }
+    .card-row {
+      flex-direction: row;
+    }
+  }
+}
+
+.card-row {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.empty-list {
+  margin-top: 150px;
 }

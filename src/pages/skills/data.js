@@ -4,9 +4,10 @@ import CssLogo from '../../assets/images/css.jpg'
 import HtmlLogo from '../../assets/images/html.svg'
 import SassLogo from '../../assets/images/sass.png'
 import ReactLogo from '../../assets/images/react.svg'
-import SvelteLogo from '../../assets/images/svelte.png'
+
+
 export const SKILLS_BY_NAME = (name) => {
-    return SKILLS_DATA.find(skill => skill.slug=== name) || null
+    return SKILLS_DATA.find(skill => skill.slug === name) || null
 }
 
 export const SHORT_SKILL_BY_SLUG = (slug) => {
@@ -66,16 +67,8 @@ export const SKILLS_DATA = [
     {
       id: 5,
       slug: 'react',
-      label: 'Reacr Js',
+      label: 'React',
       image: ReactLogo,
-      description: 'lorem ipsum',
-      relatedExperience: []
-    },
-    {
-      id: 6,
-      slug: 'svelte',
-      label: 'Svelte',
-      image: SvelteLogo,
       description: 'lorem ipsum',
       relatedExperience: []
     },

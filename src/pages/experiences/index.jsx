@@ -1,28 +1,97 @@
-import React from "react";
-import styles from './styles.module.scss'
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import SearchBar from "../../components/search-bar";
-import ExperiencesCard from "./experiences-card";
-import noImg from '../../assets/images/no-img.svg'
+import ExperienceCard from "./experiences-card/index";
+import experiencesOperation from '../../redux/experience/thunk';
+import EmptyList from "../../components/empty-list";
+import styles from "./styles.module.scss";
+import clsx from "clsx";
 
-function Experiences() {
+
+const Experiences = () => {
+    const experiences = useSelector((state) => state.experiences.list);
+    const theme = useSelector((state) => state.theme);
+    const dispatch = useDispatch();
+    const isLoading = useSelector((state) => state.experiences.isFetching);
+  
+    const { fetchExperiences } = experiencesOperation;
+    const [inputValue, setInputValue] = useState("");
+  
+    const filteredExperiences = experiences.filter((experience) => {
+      if (inputValue === "") {
+        return experience;
+      } else {
+        return experience.title.toLowerCase().includes(inputValue);
+      }
+    });
+  
+    const verticalLineClasses = clsx(styles["vertical-line"], {
+      [styles["vertical-line-dark"]]: theme === "dark",
+    });
+  
+    useEffect(() => {
+      dispatch(fetchExperiences());
+    }, []);
+  
+    const inputHandler = (value) => {
+      setInputValue(value.toLowerCase());
+      localStorage.setItem("inputExperiencesValue", value);
+    };
+  
+    const renderFilteredExperienceCards = (card, idx) => {
+      return (
+        <ExperienceCard
+          key={card.id}
+          theme={theme}
+          data={card}
+          className={idx % 2 !== 0 ? styles["card-row"] : styles["card"]}
+        />
+      );
+    };
+  
+    if (isLoading) {
+      return <div>Loading...</div>;
+    }
+  
     return (
-        <div className={styles.container}>
-            <SearchBar title="Experiences"/>
-            <div className={styles["experiences-cards-wrap"]}>
-                <div className={styles["card__item1"]}>
-                    <ExperiencesCard image = {noImg} title ="Open Source Developer" date="December 2023 - Presend 1 day" description="Creating awesome tools for developers."/>
-                </div>
-                <div className={styles["card__item2"]}>
-                    <ExperiencesCard image = {noImg} title ="Open Source Developer" date="December 2023 - Presend 1 day" description="Creating awesome tools for developers."/>
-                </div>
-                <div className={styles["card__item3"]}>
-                    <ExperiencesCard image = {noImg} title ="Open Source Developer" date="December 2023 - Presend 1 day" description="Creating awesome tools for developers."/>
-                </div>
-                
-            </div>
-            
+      <div className={styles["exp-wrap"]}>
+        <SearchBar
+          value={inputValue}
+          onChange={inputHandler}
+          title="Experiences"
+        />
+        <div className={styles["exp-cards-wrap"]}>
+          {filteredExperiences.map(renderFilteredExperienceCards)}
+          <div className={verticalLineClasses}></div>
         </div>
-    )
-}
+        {filteredExperiences.length === 0 && (
+          <EmptyList theme={theme} icon="true" className={styles["empty-list"]} />
+        )}
+      </div>
+    );
+  };
+  
+  export default Experiences;
 
-export default Experiences
+// function Experiences() {
+//     return (
+//         <div className={styles.container}>
+//             <SearchBar title="Experiences"/>
+//             <div className={styles["experiences-cards-wrap"]}>
+//                 <div className={styles["card__item1"]}>
+//                     <ExperiencesCard image = {noImg} title ="Open Source Developer" date="December 2023 - Presend 1 day" description="Creating awesome tools for developers."/>
+//                 </div>
+//                 <div className={styles.line}>asd</div>
+//                 <div className={styles["card__item2"]}>
+//                     <ExperiencesCard image = {noImg} title ="Open Source Developer" date="December 2023 - Presend 1 day" description="Creating awesome tools for developers."/>
+//                 </div>
+//                 <div className={styles["card__item3"]}>
+//                     <ExperiencesCard image = {noImg} title ="Open Source Developer" date="December 2023 - Presend 1 day" description="Creating awesome tools for developers."/>
+//                 </div>
+//             </div>
+            
+//         </div>
+//     )
+// }
+
+// export default Experiences

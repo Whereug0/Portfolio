@@ -7,14 +7,12 @@
     background: white;
 }
 
-header {
-    max-width: 1200px;
-    min-width: 1200px;
+.header {
+    width: 100%;
     margin: 0 auto;
     position: sticky;
     display: flex;
     justify-content: center;
-    border-bottom: 1px solid $border;
     max-width: max-content;
     max-width: 100%;
     a {
@@ -57,7 +55,6 @@ header {
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 0.25rem;
             a { 
                 display: flex;
                 align-items: center;
