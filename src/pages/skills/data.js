@@ -10,7 +10,7 @@ export const SKILLS_BY_NAME = (name) => {
 }
 
 export const SHORT_SKILL_BY_SLUG = (slug) => {
-  const findskill = SKILLS_DATA.map(skill => skill.slug === slug)
+  const findskill = SKILLS_DATA.find(skill => skill.slug === slug)
   if (!findskill) {
     return{}
   }

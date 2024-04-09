@@ -1,19 +1,21 @@
 import React from "react";
-
-
+import {ReactComponent as LinkIcon} from '../../assets/icons/carbon-link.svg'
+import { Link } from "react-router-dom";
 import styles from './styles.module.scss'
 
 const CardLink = (props) => {
+    function linkGit(event) {
+        event.stopPropagation()
+    }
+
     const {
         target,
         to,
         label,
-        icon
     } = props
-    console.log(props);
     return(
-        <a target={target} href={to} data-label={label} className={styles["card-link"]}>
-            <img src={icon} alt="" className={styles["icon"]}/>
+        <a target={target} href={to} data-label={label} className={styles["card-link"]} onClick={linkGit}>
+            <LinkIcon />
         </a>
     )
 }

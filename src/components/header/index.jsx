@@ -6,7 +6,7 @@ import projectsIcon from '../../assets/icons/projects.svg'
 import experiencesIcon from '../../assets/icons/experiences.svg'
 import educationIcon from '../../assets/icons/education.svg'
 import resumeIcon from '../../assets/icons/resume.svg'
-import searchIcon from '../../assets/icons/search.svg'
+// import searchIcon from '../../assets/icons/search.svg'
 import dark from '../../assets/icons/moon.svg'
 import { Link } from "react-router-dom";
 function Header() {
@@ -43,7 +43,7 @@ function Header() {
                     </div>
                     <div className={styles.search_dark_light}>
                         <Link to={'/search'}>
-                            <img src={searchIcon} alt="" />
+                            {/* <img src={searchIcon} alt="" /> */}
                         </Link>
                         <a href="#">
                             <img src={dark} alt="" />

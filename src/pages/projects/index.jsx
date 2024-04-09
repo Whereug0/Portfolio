@@ -1,11 +1,30 @@
-import React from "react";
+import React, { useDebugValue, useEffect } from "react";
 import styles from './styles.module.scss'
 import SearchBar from "../../components/search-bar";
 import Chip from "../../components/chip";
 import ProjectCard from "./project-card";
-import PROPJECT_DATA from "./detail/data";
+import { useDispatch, useSelector } from "react-redux";
+import projectsOperations from '../../redux/projects/thunk'
+import { Link } from "react-router-dom";
 
 function Projects() {
+    const projects = useSelector(state => state.projects.list)
+    const isLoading = useSelector(state => state.projects.isFetching)
+    const dispatch = useDispatch()
+    const {fetchProjects} = projectsOperations
+
+    useEffect(() => {
+        dispatch(fetchProjects())
+    },[])
+
+    if (isLoading) {
+        return (
+            <div>
+                loading...
+            </div>
+        )
+    }
+
     return (
         <div className={styles["project-wrap-page"]}>
             <SearchBar title="Projects"/>
@@ -15,9 +34,13 @@ function Projects() {
                 <Chip label = "React"/>
             </div>
             <div className={styles["cards"]}>
-                {PROPJECT_DATA.map(item => {
+                {projects.map(project => {
                     return (
-                        <ProjectCard project={item}/>
+                        <Link to={`/projects/${project.id}`} key={project.id}>
+                            <ProjectCard 
+                            title={project.label}
+                            project={project}/>
+                        </Link>
                     )
                 })}
             </div>

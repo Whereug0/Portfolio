@@ -4,23 +4,27 @@ import BoxLayout from "../../../components/box-layout/index";
 import CardLink from "../../../components/card-link/index";
 import Chip from "../../../components/chip";
 import LinkIcon from '../../../assets/icons/carbon-link.svg'
-import TsIcon from '../../../assets/images/ts.png'
 import ChipIcon from "../../../components/chip-icon";
-import { Link } from "react-router-dom";
+
+
 const ProjectCard = (props) => {
     const {
         project,
     } = props
 
   return (
-    <Link to = {`/projects/${project.id}`} className={styles["project-card-wrap"]}>
+    <div className={styles["project-card-wrap"]}>
       <BoxLayout>
         <div className={styles["img-box"]}>
           <img src={project.icon} alt="img" className="img-logo"/>
         </div>
         <div className={styles["title-link"]}>
           <h3>{project.name}</h3>
-          <CardLink to="https://github.com/Whereug0" label="GitHub" target='_blank' icon={LinkIcon}/>
+          {project.links.map((link) => (
+            (
+              <CardLink key={link.id} to={link.link} label={link.label} target ="_blank"></CardLink>
+            )
+          ))}
         </div>
         <div className={styles["template"]}>
             <p>Website Template</p>
@@ -33,16 +37,17 @@ const ProjectCard = (props) => {
             <Chip label = "December 2023"/>
             <Chip label = "now"/>
         </div>
-        <div className={styles["skill-list"]}>
+        <div className={styles["project-list"]}>
           {project.skills.map((skill, idx) => {
             return (
-              <ChipIcon  to={`/skills/${skill.slug}`} label = "TypeScript" icon={TsIcon}/>
+              <ChipIcon  to={`/skills/${skill.slug}`} label = {skill.label} icon={skill.image}/>
             )
           })}
-          
         </div>
+        
+
       </BoxLayout>
-    </Link>
+    </div>
   );
 };
 

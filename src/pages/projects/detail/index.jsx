@@ -9,7 +9,7 @@ const DetailProject = () => {
     
     return(
         <div>
-            detail projects - {id}
+            detail project - {id}
         </div>
     )
 }
