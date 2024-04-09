@@ -1,14 +1,16 @@
-* {
+*, *::before, *::after {
+  box-sizing: border-box;
+  transition-duration: .2s;
+  transition: background,border-color,opacity,box-shadow,top,bottom,left,margin,right;
+  text-decoration: none;
+  color: inherit;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-  transition-duration: 0.2s;
-  transition-property: background,border-color,opacity,box-shadow,top,bottom,left,margin,right;
 }
 
-body{
+body {
+  margin: 0;
   font-family: 'Inter', sans-serif;
-  letter-spacing: 1px;
 }
+
 
