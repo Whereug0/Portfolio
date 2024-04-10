@@ -15,8 +15,17 @@
         
 
         &:focus {
-            border: 2px solid $border-hover;
+            border: 1px solid $border-hover;
             background-color: $main-hover;
         }
+        &.input-dark {
+            background: transparent;
+            border: 1px solid $dark-2;
+            &:focus {
+                border: 1px solid $light-7;
+                background-color: $dark-1;
+            }
+           }
     }
+
 }

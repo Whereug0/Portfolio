@@ -1,12 +1,12 @@
 import React from "react";
-import { ReactComponent as SkillsIcon } from "./../../assets/icons/skills-icon.svg";
-import { ReactComponent as ProjectsIcon } from "./../../assets/icons/projects-icon.svg";
-import { ReactComponent as ExperiencesIcon } from "./../../assets/icons/experience-icon.svg";
-import { ReactComponent as EducationIcon } from "./../../assets/icons/education-icon.svg";
-import { ReactComponent as ResumeIcon } from "./../../assets/icons/resume-icon.svg";
-import { ReactComponent as SearchIcon } from "./../../assets/icons/search-icon.svg";
-import { ReactComponent as SunIcon } from "./../../assets/icons/sun-icon.svg";
-import { ReactComponent as MoonIcon } from "./../../assets/icons/moon-icon.svg";
+import { ReactComponent as SunIcon } from "../../assets/icons/sun.svg";
+import { ReactComponent as MoonIcon } from "../../assets/icons/moon.svg";
+import { ReactComponent as SearchIcon } from "../../assets/icons/search.svg";
+import { ReactComponent as SkillsIcon } from "../../assets/icons/skills.svg";
+import { ReactComponent as ProjectsIcon } from "../../assets/icons/projects.svg";
+import { ReactComponent as ExperiencesIcon } from "../../assets/icons/experiences.svg";
+import { ReactComponent as EducationIcon } from "../../assets/icons/education.svg";
+import { ReactComponent as ResumeIcon } from "../../assets/icons/resume.svg";
 
 import { Link } from "react-router-dom";
 import styles from "./styles.module.scss";

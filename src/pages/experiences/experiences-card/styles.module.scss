@@ -50,6 +50,9 @@
       .exp {
         margin-bottom: 5px;
         margin-right: 5px;
+        &.card-link-dark {
+          color: blue;
+        }
       }
     }
     .date {

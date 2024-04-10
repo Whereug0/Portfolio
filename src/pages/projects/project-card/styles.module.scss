@@ -3,6 +3,7 @@
 
 .project-card-wrap {
     color: black;
+    border-radius: 15px;
     .img-box {
         img {
             width: 40px;
@@ -16,6 +17,9 @@
         align-items: center;
         margin-top: 10px;
         opacity: 0.6;
+        &.template-dark{
+            color: $light-2;
+        }
     }
     .title-link{
         display: flex;
@@ -26,7 +30,10 @@
         border-bottom: 1px solid $border;
     }
     .description{
-        padding: 30px 0;
+        margin: 20px 0;
+        overflow: auto;
+        height: 120px;
+        padding: 10px 0;
     }
     .chips {
         display: flex;
@@ -35,6 +42,10 @@
         border-bottom: 1px solid $border;
         padding-bottom: 10px;
         margin-bottom: 10px;
+    }
+    &.project-card-dark {
+        border-color: $dark-2;
+        color: $light-2;
     }
 }
 

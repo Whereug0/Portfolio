@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import clsx from "clsx";
 import { changeTheme } from "../../redux/theme/actions";
+import BurgerMobile from '../burger-icon/index';
+
 
 import { ReactComponent as SunIcon } from "../../assets/icons/sun.svg";
 import { ReactComponent as MoonIcon } from "../../assets/icons/moon.svg";
@@ -64,7 +66,7 @@ function Header() {
 
   return (
     <header className={styles.header}>
-      <nav className={styles.header}>
+      <nav className={styles.nav}>
         <Link className={styles.hidden} to={"/"}>
           <div className={headerItemDarkHoverClasses}>
             <CarboneCode />
@@ -75,31 +77,41 @@ function Header() {
           <Link className={styles.link} to="/skills">
             <div className={headerItemDarkHoverClasses}>
               <SkillsIcon />
-              Skills
+              <p>
+                Skills
+              </p>
             </div>
           </Link>
           <Link className={styles.link} to={"/projects"}>
             <div className={headerItemDarkHoverClasses}>
               <ProjectsIcon />
-              Projects
+              <p>
+                Projects
+              </p>
             </div>
           </Link>
           <Link className={styles.link} to={"/experiences"}>
             <div className={headerItemDarkHoverClasses}>
               <ExperiencesIcon />
-              Experiences
+              <p>
+                Experiences
+              </p>
             </div>
           </Link>
           <Link className={styles.link} to={"/education"}>
             <div className={headerItemDarkHoverClasses}>
               <EducationIcon />
-              Education
+              <p>
+                Experiences
+              </p>
             </div>
           </Link>
           <Link className={styles.link} to={"/resume"}>
             <div className={headerItemDarkHoverClasses}>
               <ResumeIcon />
-              Resume
+              <p>
+                Resume
+              </p>
             </div>
           </Link>
         </div>
@@ -126,6 +138,12 @@ function Header() {
             {theme === "dark" && <MoonIcon className={themeIconClasses} />}
           </div>
         </div>
+        <BurgerMobile
+              isActiveBurgerMenu={isActiveBurgerMenu}
+              setIsActiveBurgerMenu={setIsActiveBurgerMenu}
+              onClick={handleShowBurgerMenu}
+              theme={theme}
+        />
       </nav>
     </header>
   );

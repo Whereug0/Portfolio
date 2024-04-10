@@ -5,6 +5,7 @@
   font-size: 12px;
   border-radius: 20px;
   padding: 5px 15px;
+
   cursor: pointer;
   border: 1px solid $border;
   color: $tertiary-text;
@@ -31,5 +32,12 @@
   }
   &:hover {
     background-color: $main-hover;
+  }
+  &.border-dark {
+    color: $light-2;
+    border: 1px solid $dark-2;
+    &:hover{
+      background: $dark-1;
+    }
   }
 }

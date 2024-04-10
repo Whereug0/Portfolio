@@ -4,12 +4,14 @@
     display: flex;
     position: relative;
     border: 1px solid $border;
-    // align-items: center;
     justify-content: center;
     width: 37px;
     height: 37px;
     border-radius: 10px;
     color: black;
+    &.chip-icon-dark{
+        border-color: $dark-2;
+    }
     &.cursor-help {
         cursor: help;
     }

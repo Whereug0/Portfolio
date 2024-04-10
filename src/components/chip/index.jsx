@@ -11,13 +11,16 @@ const Chip = (props) => {
         onClick, 
         className,
         asLink,
-        icon
+        icon,
+        theme
     } = props 
     const classes = clsx( 
         styles['chip-wrap'], 
-        { 
+        {   
+            [styles["chip-wrap-dark"]]: theme === "dark",
+            [styles["border-dark"]]: theme === "dark",
             [styles['active']]:isActive, 
-            [className]: className 
+            [className]: className,
         } 
     )
     const renderLabel = () => {

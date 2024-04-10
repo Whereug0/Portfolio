@@ -11,6 +11,7 @@
     padding: 5px;
     border-radius: 10px;
     color: black;
+
     &:hover{
         border: 1px solid $border-hover;
         &::before{
@@ -24,5 +25,11 @@
             border-radius: 15px;
             z-index: 10;
         }
+    }
+    &.card-link-dark {
+        border: 1px solid $dark-2;
+    }
+    .link-icon-dark{
+        color: $light-2;
     }
 }

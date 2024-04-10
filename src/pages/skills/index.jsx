@@ -7,10 +7,15 @@ import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
 const Skills = () => {
-    const skills = useSelector(state => state.skills.list)
-    
-    const isLoading = useSelector(state => state.skills.isFetching)
+    const skills = useSelector(state => state.skills.list);
+    const theme = useSelector((state) => state.theme);
+    const isLoading = useSelector(state => state.skills.isFetching);
     const dispatch = useDispatch()
+
+
+
+  
+    
 
     const { fetchSkills} = skillsOperations
 

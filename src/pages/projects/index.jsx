@@ -9,6 +9,8 @@ import { Link } from "react-router-dom";
 
 function Projects() {
     const projects = useSelector(state => state.projects.list)
+    const theme = useSelector((state) => state.theme);
+
     const isLoading = useSelector(state => state.projects.isFetching)
     const dispatch = useDispatch()
     const {fetchProjects} = projectsOperations
@@ -29,17 +31,19 @@ function Projects() {
         <div className={styles["project-wrap-page"]}>
             <SearchBar title="Projects"/>
             <div className={styles["chips-wrap"]}>
-                <Chip label = "TypeScript"/>
-                <Chip label = "Sass"/>
-                <Chip label = "React"/>
+                <Chip theme={theme} label = "TypeScript"/>
+                <Chip theme={theme} label = "Sass"/>
+                <Chip theme={theme} label = "React"/>
             </div>
             <div className={styles["cards"]}>
                 {projects.map(project => {
                     return (
                         <Link to={`/projects/${project.id}`} key={project.id}>
                             <ProjectCard 
-                            title={project.label}
-                            project={project}/>
+                                theme={theme}
+                                title={project.label}
+                                project={project}
+                            />
                         </Link>
                     )
                 })}

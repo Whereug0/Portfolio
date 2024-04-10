@@ -6,13 +6,21 @@ import githubLogo from '../../assets/icons/icons-home-page/github-142-svgrepo-co
 import linkedLogo from '../../assets/icons/icons-home-page/linkedin-svgrepo-com.svg'
 import emailLogo from '../../assets/icons/icons-home-page/email-address-sign-at-inbox-svgrepo-com.svg'
 import SkillsSlider from "./skills-slider";
-
+import { useSelector } from "react-redux";
+import clsx from "clsx";
 
 function Home() {
+  const theme = useSelector((state) => state.theme);
+
+  const Classes = clsx(styles["content"], {
+    [styles["content-dark"]]: theme === "dark",
+  });
+
+
   return (
     <div className={styles.container}>
       <div className={styles["content-box"]}>
-        <div className={styles.content}>
+        <div className={Classes}>
           <h1>Elbar Beksultanov</h1>
           <p>
             Привет! Я Frontend developer

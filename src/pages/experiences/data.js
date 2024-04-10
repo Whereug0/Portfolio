@@ -78,10 +78,8 @@ export const EXPERIENCE_DATA = [
     skills: [
       SHORT_SKILL_BY_SLUG("js"),
       SHORT_SKILL_BY_SLUG("ts"),
-      SHORT_SKILL_BY_SLUG("css"),
       SHORT_SKILL_BY_SLUG("html"),
       SHORT_SKILL_BY_SLUG("sass"),
-      SHORT_SKILL_BY_SLUG("svelte"),
     ],
   },
   {
@@ -112,7 +110,6 @@ export const EXPERIENCE_DATA = [
     description: "Creating awesome tools for developers.",
     skills: [
       SHORT_SKILL_BY_SLUG("js"),
-      SHORT_SKILL_BY_SLUG("css"),
       SHORT_SKILL_BY_SLUG("html"),
     ],
   },

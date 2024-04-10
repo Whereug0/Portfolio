@@ -1,11 +1,13 @@
 @import '../../assets/styles/light_theme.scss';
 .box-layout {
     width: 100%;
-    border-radius: 15px;
     padding: 25px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: $border;
+    border-radius: 15px;
+    border: 1px solid $border;
+
+    &.box-layout-dark{
+        border-color: $dark-2;
+    }
     &:hover {
         border-color: $border-hover;
     }

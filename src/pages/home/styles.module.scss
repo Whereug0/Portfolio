@@ -15,17 +15,35 @@
         margin-top: 15px;
     }
     .content {
-        width: 768px;
+        width: 100%;
+        max-width: 768px;
         text-align: left;
         color: $tertiary-text;
-        
         h1 {
             font-size: 4em;
         }
         p {
             font-size: 1.2em;
-            font-weight: 200;
+        }
+    }
+    .content-dark {
+        color: $light-2;
+    }
+}
 
+
+@media (max-width:768px) {
+    .container {
+        flex-direction: column-reverse;
+        padding: 0;
+        margin: 80px 0;
+        .content{
+            text-align: center;
+        }
+        .icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     }
 }

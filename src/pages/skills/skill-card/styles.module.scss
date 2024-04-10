@@ -5,11 +5,17 @@
   position: relative;
   overflow: hidden;
   max-width: 100%;
+  &.card-dark{
+    border: 1px solid $dark-2;
+  }
   .title {
     color: $tertiary-text;
     cursor: pointer;
     font-size: 16px;
     font-weight: 300;
+    &.title-dark {
+      color: $light-2;
+  }
   }
   .image-wrap {
     position: absolute;
@@ -41,5 +47,10 @@
         rgba(255, 255, 255, 0.40397408963585435) 100%
       );
     }
+    &.img-dark {
+      &::before {
+             background: linear-gradient(90deg,$dark-0 0%,$dark-0 10%,$dark-0-60 100%),no-repeat right 40%/40%;
+      }
+  }
   }
 }
