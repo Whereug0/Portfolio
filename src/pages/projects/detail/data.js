@@ -36,7 +36,9 @@ const PROJECT_DATA = [
         description: "Онлайн магазин разных видов товаров, данные взяты из общедоступного API.",
         skills: [
             SHORT_SKILL_BY_SLUG("js"),
-            SHORT_SKILL_BY_SLUG("sass")
+            SHORT_SKILL_BY_SLUG("react"),
+            SHORT_SKILL_BY_SLUG("html"),
+            SHORT_SKILL_BY_SLUG("sass"),
         ]
     },
     {

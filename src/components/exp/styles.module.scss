@@ -13,6 +13,13 @@
     &.card-link-dark {
         color: $light-2;
         border: 1px solid $dark-2;
+        &:hover{
+            &::before {
+                background: $dark-2;
+                color: $light-2;
+            }
+        }
+
 
     }
     cursor: help;

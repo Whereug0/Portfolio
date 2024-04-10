@@ -42,6 +42,9 @@
       font-size: 18px;
       font-weight: 700;
       letter-spacing: 1px;
+      &.title-dark{
+        color: $light-2;
+      }
     }
     .exps-wrap {
       display: flex;
@@ -68,6 +71,9 @@
       }
     }
     .experience {
+      &.experience-dark{
+        color: $light-2;
+      }
       .experience-text {
         letter-spacing: 1px;
       }

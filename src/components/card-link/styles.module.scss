@@ -15,13 +15,14 @@
     &:hover{
         border: 1px solid $border-hover;
         &::before{
+            color: $light-2;
             content: attr(data-label);
             position: absolute;
             top: calc(100% + 5px);
             right: 40%;
             padding: 5px 10px;
             width: max-content;
-            background-color: $secondary;
+            background-color: $dark-2;
             border-radius: 15px;
             z-index: 10;
         }

@@ -19,6 +19,14 @@ const ExperienceCard = (props) => {
   const conditionWrapClasses = clsx(styles["condition-icon-wrap"], {
     [styles["condition-icon-wrap-dark"]]: theme === "dark",
   });
+  const titleClasses = clsx(styles["title"], {
+    [styles["title-dark"]]: theme === "dark",
+  });
+  const experienceClasses = clsx(styles["experience"], {
+    [styles["experience-dark"]]: theme === "dark",
+  });
+
+ 
 
   return (
     <div className={cardClasses}>
@@ -28,7 +36,7 @@ const ExperienceCard = (props) => {
             <img src={data.image} alt="No Img" />
           </div>
           <div className={styles["body"]}>
-            <h6 className={styles["title"]}>{data.title}</h6>
+            <h6 className={titleClasses}>{data.title}</h6>
             <div className={styles["exps-wrap"]}>
               {data &&
                 data.types &&
@@ -49,7 +57,7 @@ const ExperienceCard = (props) => {
                 {data.workPeriodFrom} - {data.workPeriodTo} · {data.duration}
               </span>
             </div>
-            <div className={styles["experience"]}>
+            <div className={experienceClasses}>
               <span className={styles["experience-text"]}>
                 Creating awesome tools for developers.
               </span>
