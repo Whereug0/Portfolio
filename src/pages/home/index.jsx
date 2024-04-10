@@ -18,6 +18,10 @@ function Home() {
     [styles["content-dark"]]: theme === "dark",
   });
 
+  const iconClasses = clsx(styles["icon"], {
+    [styles['icon-dark']]: theme === "dark"
+  })
+
 
   return (
     <div className={styles.container}>
@@ -36,18 +40,18 @@ function Home() {
         </div>
         <div className={styles.icons}>
           <a target="blank" href="https://vk.com/whereugo">
-            <VkLogo />
+            <VkLogo fill={theme === "dark" ? "#C1C1C1" : "#00000"}/>
           </a>
           <a target="blank" href="https://t.me/el1eo">
-            <TelegramLogo />
+            <TelegramLogo fill={theme === "dark" ? "#C1C1C1" : "#00000"}/>
+          </a>
+          <a target="blank" href="https://github.com/Whereug0">
+            <GithubLogo fill={theme === "dark" ? "#C1C1C1" : "#00000"}/>
           </a>
           <div className={styles.logo}>
-            <EmailLogo />:
+            <EmailLogo fill={theme === "dark" ? "#C1C1C1" : "#00000"}/>:
             elbar.ace@mail.ru
           </div>
-          {/* <img src={githubLogo}></img>
-          <img src={linkedLogo}></img>
-          <img src={emailLogo}></img> */}
         </div>
       </div>
       <SkillsSlider />

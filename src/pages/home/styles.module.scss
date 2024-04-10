@@ -15,6 +15,9 @@
     align-items: center;
     margin-top: 15px;
     gap: 10px;
+    &.icon-dark{
+        color: $light-2;
+    }
     a {
         display: flex;
         align-items: center;
