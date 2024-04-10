@@ -68,3 +68,16 @@
     }
   }
 }
+
+
+@media (max-width: 450px) {
+    .container {
+        margin-top: 0px;
+        .content {
+            h1{
+                font-size: 3em;
+            }
+        }
+
+    }
+}
