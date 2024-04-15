@@ -46,7 +46,6 @@ const ProjectCard = (props) => {
         </div>
         <div className={styles["chips"]}>
           <Chip theme={theme} label="December 2023" />
-          <Chip theme={theme} label="now" />
         </div>
         <div className={styles["project-list"]}>
           {project.skills.map((skill, idx) => {

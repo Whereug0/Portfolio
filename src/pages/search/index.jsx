@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 import { SKILLS_DATA } from "../skills/data";
 import Chip from "../../components/chip";
 import EmptyList from '../../components/empty-list';
-import PROJECT_DATA from "../projects/detail/data";
+import {PROJECTS_DATA} from "../projects/detail/data";
 import { EXPERIENCE_DATA } from "../experiences/data";
 
 const Search = () => {
@@ -25,7 +25,7 @@ const Search = () => {
       localStorage.setItem("inputSkillsValue", value);
     };
   
-    const filteredProjects = PROJECT_DATA.filter((project) => {
+    const filteredProjects = PROJECTS_DATA.filter((project) => {
       if (inputValue === "") {
         return null;
       } else {

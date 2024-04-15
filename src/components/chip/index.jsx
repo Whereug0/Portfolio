@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
  
 const Chip = (props) => { 
     const{ 
+        target,
         label,
         isActive, 
         onClick, 
@@ -38,7 +39,7 @@ const Chip = (props) => {
 
     if (asLink) {
         return(
-            <Link to={asLink} className={classes}>
+            <Link target={target} to={asLink} className={classes}>
                {renderLabel()}
             </Link>
         )

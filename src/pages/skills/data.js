@@ -13,13 +13,13 @@ export const SKILLS_BY_NAME = (name) => {
 export const SHORT_SKILL_BY_SLUG = (slug) => {
   const findskill = SKILLS_DATA.find(skill => skill.slug === slug)
   if (!findskill) {
-    return{}
+    return{};
   }
   return {
     id: findskill.id,
     slug: findskill.slug,
     label: findskill.label,
-    image: findskill.image
+    image: findskill.image,
   }
 }
 

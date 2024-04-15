@@ -11,39 +11,35 @@ import screenshot6 from '../../../assets/images/6.png';
 
 
 
-export const SHORT_PROJECT_BY_SLUG = (id) => {
-  const findproject = PROJECT_DATA.find(project => project.id === id)
-  if (!findproject) {
+export const PROJECT_BY_ID = (id) => {
+  const findProject = PROJECTS_DATA.find((project) => project.id === id);
+  if (!findProject) {
     return {};
-  } return {
-    id: findproject.id,
-    name: findproject.name,
-    icon: findproject.icon,
-    links: findproject.links,
-    description: findproject.description,
-    skills: findproject.skills,
-    screenshots: findproject.screenshots,
   }
-}
+  return {
+    id: findProject.id,
+    icon: findProject.icon,
+    name: findProject.name,
+    links: findProject.links,
+    description: findProject.description,
+    skills: findProject.skills,
+    screenshots: findProject.screenshots,
+  };
+};
 
-const PROJECT_DATA = [
+export const PROJECTS_DATA = [
     {
-        id: 0,
+        id: "0",
         icon: jsLogo,
         name: 'Online Store',
         links: [
             {
-                id:0,
+                id:"0",
                 link:'https://github.com/Whereug0/my-shop',
                 label: "GitHub",
-            },
-            {
-              id: "1",
-              link: "https://my-shop-wheat-delta.vercel.app/",
-              label: "Ссылка на сайт(деплой)"
-            }
+            },    
         ],
-        description: "Онлайн магазин разных видов товаров, данные взяты из общедоступного API.",
+        description: "Онлайн магазин разных видов товаров, данные взяты из общедоступного API. Функционал: поиск, сортировка(по цене, категории), имитация входа в личный кабинет и регистрации, можно изменять данные в личном кабинете, добавление и удаление из корзины и избранного",
         skills: [
             SHORT_SKILL_BY_SLUG("js"),
             SHORT_SKILL_BY_SLUG("react"),
@@ -78,12 +74,12 @@ const PROJECT_DATA = [
         ]
     },
     {
-        id: 1,
+        id: "1",
         icon: tsLogo,
         name: 'Project2',
         links: [
           {
-            id: 0,
+            id: "0",
             link: 'https://github.com',
             label: 'Github'
           }
@@ -97,4 +93,3 @@ const PROJECT_DATA = [
 ]
 
 
-export default PROJECT_DATA

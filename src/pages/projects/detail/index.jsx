@@ -1,13 +1,16 @@
 import React, { useEffect } from "react";
-import styles from './styles.module.scss';
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import projectsOperation from "../../../redux/projects/thunk";
+import projectsOperation from "./../../../redux/projects/thunk";
+import Chip from "../../../components/chip";
+// import { ReactComponent as WithoutIcon } from "./../../../assets/images/without-screenshot.svg";
+import linkIcon from "./../../../assets/icons/paper-clip.svg";
+import styles from "./styles.module.scss";
 import clsx from "clsx";
-import BoxTitle from '../../../components/box-title';
-import Chip from '../../../components/chip';
-import linkIcon from '../../../assets/icons/paper-clip.svg';
+// import MainTitle from "../../../components/main-title";
 import BoxImage from "../../../components/box-image";
+import BoxTitle from "../../../components/box-title";
+import ChipIcon from "../../../components/chip-icon";
 
 const DetailProject = () => {
   
@@ -16,7 +19,6 @@ const DetailProject = () => {
   const dispatch = useDispatch();
   const { fetchProjectById } = projectsOperation;
   const data = useSelector((state) => state.projects.data);
-
   const project = {
     ...data,
   };
@@ -71,8 +73,8 @@ const DetailProject = () => {
             marginBottom
             icon={linkIcon}
             target="_blank"
-            label="Github"
-            asLink="https://github.com/Whereug0/my-shop"
+            label="Deploy(ССЫЛКА НА САЙТ, НАЖАТЬ НА МЕНЯ)"
+            asLink="https://my-shop-wheat-delta.vercel.app/"
           />
           <div className={styles["skills-wrap"]}>
             {project &&
@@ -93,6 +95,7 @@ const DetailProject = () => {
         </div>
       </BoxTitle>
       <div className={descriptionWrapClasses}>
+        <p>Иногда список товаров может криво выводиться, т.к. API в общем доступе и его изменяют, некоторые товары могут быть без картинок</p>
         <p className={styles["description"]}>{project.description}</p>
       </div>
       <div className={styles["screenshot-images-wrap"]}>
@@ -101,10 +104,6 @@ const DetailProject = () => {
       {project &&
         (!project.screenshots || project.screenshots.length === 0) && (
           <div className={styles["screenshots-wrap"]}>
-            {/* <WithoutIcon
-              className={styles["img"]}
-              fill={theme === "dark" ? "#2E2E2E" : "#E1E1E1"}
-            /> */}
             <div className={styles["screenshots-text"]}>
               <p className={textClasses}>No screenshot</p>
             </div>
