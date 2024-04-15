@@ -102,7 +102,7 @@ function Header() {
             <div className={headerItemDarkHoverClasses}>
               <EducationIcon />
               <p>
-                Experiences
+                Education
               </p>
             </div>
           </Link>

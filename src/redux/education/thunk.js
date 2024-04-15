@@ -17,4 +17,4 @@ const fetchEducation = () => {
   };
 };
 
-export default { fetchEducation };
+export default {fetchEducation};

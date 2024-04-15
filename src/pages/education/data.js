@@ -5,72 +5,64 @@ export const EDUCATION_DATA = [
   {
     id: "0",
     image: noImg,
-    title: "Bachelor degree of Computer Science",
-    institution: "ISTIC",
-    country: "Tunisia",
-    period: "2 years",
+    title: "Frontend Developer",
+    institution: "Codify",
+    country: "Kyrgyzstan",
+    period: "1 year",
     subjects: [
       {
         id: "0",
-        subject: "C",
+
+        subject: "JavaScript",
       },
       {
         id: "1",
-        subject: "Algorithm",
+        subject: "CSS",
       },
       {
         id: "2",
-        subject: "Algebra",
+
+        subject: "SASS",
       },
       {
         id: "3",
-
-        subject: "Python",
+        subject: "React",
       },
       {
         id: "4",
-
-        subject: "C++",
+        subject: "Redux",
       },
       {
         id: "5",
-
-        subject: "Java",
+        subject: "TypeScript",
       },
       {
         id: "6",
-
-        subject: "English",
+        subject: "Next.js",
       },
     ],
   },
   {
     id: "1",
     image: noImg,
-    title: "PhD of Computer Science",
-    institution: "MIT",
-    country: "USA",
-    period: "1 year",
+    title: "Техник-программист",
+    institution: "NSUEM ( НГУЭУ ) - Новосибирский Государственный Университет Экономики и Управления ",
+    country: "Russia",
+    period: "4 years",
     subjects: [
       {
         id: "0",
-
-        subject: "Assembly",
+        subject: "Algebra",
       },
       {
         id: "1",
-
-        subject: "Rust",
+        subject: "Python",
       },
       {
         id: "2",
-
-        subject: "Computer Architecture",
-      },
-      {
-        id: "3",
-        subject: "Algorithms and Data structures",
+        subject: "English",
       },
     ],
   },
+
 ];

@@ -4,18 +4,17 @@ import Input from "../input";
 import { useSelector } from "react-redux";
 
 const SearchBar = (props) => {
-  const { title } = props;
+  const { title, value, onChange } = props;
   const theme = useSelector((state) => state.theme);
   
 
-  const [value, setValue] = useState('')
   return (
     <div className={styles["search-bar"]}>
       <h2 className={styles["title"]}>{title}</h2>
-      <Input 
+      <Input
         theme={theme}
         value={value} 
-        onChange={setValue}
+        onChange={onChange}
       />
     </div>
   );

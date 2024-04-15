@@ -11,7 +11,10 @@
      font-weight: 900; 
      z-index: 2; 
      border-bottom:1px solid $border; 
-     margin: 0; 
+     margin: 0;
+     &.title-dark {
+      border-bottom: 1px solid $dark-2
+     }
  } 
  } 
     .description{ 
@@ -19,6 +22,10 @@
       border-bottom: 1px solid $border;
       font-size: 15px;
       line-height: 1.75rem;
+      &.description-dark {
+        color: $light-1;
+        border-bottom: 1px solid $dark-2;
+      }
     } 
 } 
  
@@ -51,5 +58,21 @@
       rgba(255, 255, 255, 0.5008928571428572) 90%,
       rgba(255, 255, 255, 0.40397408963585435) 100%
     ); 
+  }
+  &.image-wrap-dark{
+    &::before {
+      background: linear-gradient(90deg,$dark-0 0%,$dark-0 10%,$dark-0-60 100%),no-repeat right 40%/40%;
+    }
   } 
+}
+
+
+@media (max-width: 480px) {
+  .detail-page-wrap{
+    .title-wrap {
+      .title {
+        font-size: 40px;
+      }
+    }
+  }
 }

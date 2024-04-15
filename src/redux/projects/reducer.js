@@ -14,35 +14,35 @@ const projectReduser = (state = initialState,action) => {
         case GET_PROJECTS_REQUEST:
             return{
                 ...state,
-                initialState:true
+                isFetching:true
             }
         case GET_PROJECTS_SUCCESS:
             return{
                 ...state,
-                initialState: false,
+                isFetching: false,
                 list:action.payload
             }
         case GET_PROJECTS_ERROR:
             return{
                 ...state,
-                initialState:false,
+                isFetching:false,
                 error: action.payload
             }
         case GET_PROJECT_BY_SLUG_REQUEST:
             return {
                 ...state,
-                initialState: true
+                isFetching: true
             }
         case GET_PROJECT_BY_SLUG_SUCCESS:
             return {
                 ...state,
-                initialState: false,
+                isFetching: false,
                 data:action.payload
             }
         case GET_PROJECT_BY_SLUG_ERROR:
             return {
                 ...state,
-                initialState: false,
+                isFetching: false,
                 error: action.payload
             }
         default: 

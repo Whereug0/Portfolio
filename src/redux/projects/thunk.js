@@ -14,11 +14,11 @@ const fetchProjects = () => {
 }
 
 
-const fetchProjectBySlug = (slug) => {
+const fetchProjectById = (id) => {
     return async (dispatch) => {
         dispatch(getProjectRequest())
         try {
-            dispatch(getProjectSuccess(SHORT_PROJECT_BY_SLUG(slug)))
+            dispatch(getProjectSuccess(SHORT_PROJECT_BY_SLUG(id)))
         } catch(e) {
             dispatch(getProjectError(e))
         }
@@ -26,6 +26,6 @@ const fetchProjectBySlug = (slug) => {
 }
 
 export default{
-    fetchProjectBySlug,
+    fetchProjectById,
     fetchProjects
 }
