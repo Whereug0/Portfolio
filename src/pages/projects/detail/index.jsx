@@ -3,14 +3,11 @@ import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import projectsOperation from "./../../../redux/projects/thunk";
 import Chip from "../../../components/chip";
-// import { ReactComponent as WithoutIcon } from "./../../../assets/images/without-screenshot.svg";
 import linkIcon from "./../../../assets/icons/paper-clip.svg";
 import styles from "./styles.module.scss";
 import clsx from "clsx";
-// import MainTitle from "../../../components/main-title";
 import BoxImage from "../../../components/box-image";
 import BoxTitle from "../../../components/box-title";
-import ChipIcon from "../../../components/chip-icon";
 
 const DetailProject = () => {
   
@@ -35,6 +32,7 @@ const DetailProject = () => {
 
   useEffect(() => {
     dispatch(fetchProjectById(id));
+    // eslint-disable-next-line
   }, []);
 
   const renderScreenshots = () => {
