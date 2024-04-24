@@ -6,7 +6,6 @@ import Skills from "./pages/skills";
 import DetailSkill from "./pages/skills/detail";
 import Projects from "./pages/projects";
 import Experiences from "./pages/experiences";
-// import DetailExperiences from "./pages/experiences/detail";
 import Education from "./pages/education";
 import Resume from "./pages/resume";
 import Search from "./pages/search";
